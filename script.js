@@ -1,7 +1,16 @@
 //script.js for quiz challenge
 
+//var header = getElementById('header');
 
+function clickStartButton() {
+    alert("The button was clicked!");
+    console.log("Someone clicked a button!");
+}
 
+//function startTimer() {
+//    var timer=10000;
+
+//}
 
 
 
