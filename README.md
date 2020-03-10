@@ -1,67 +1,87 @@
 <!-- quizchallenge
-Quiz Challenge using persistent local storage -->
-<!-- First draft of game description,pseudocode -->
+Quiz Challenge uses persistent local storage -->
+<!-- Updated game play explanation and updated functional requirements-->
+
 ## Quiz Challenge
 
 ### What is Quiz Challenge?
 
-Quiz Challenge is a single-player, timed, question and answer game. 
+Quiz Challenge is a single-player, timed, question and answer game.
 
-A series of ten multiple-choice questions is displayed on screen, one question at a time. 
+When the web page loads, Player is presented with a Start button and is asked for their initials.
 
-Each question presents four choices, a, b, c, and d. 
+When the player clicks the button, the first of several questions, and its four multiple-choice answers, appears on the screen, and a countdown timer starts.
 
-There is only one correct choice for each answer. 
+For each of the multiple choice questions displayed:
 
-A point is added to the Player score for each correct answer. 
+- The player chooses one of the four answers, only one of which is correct. 
 
-A point is deducted from Player score for each incorrect answer. 
+- If answer is correct, a point is added to the Player score.
 
-Some time is taken off the countdown clock for each incorrect answer. 
+- Otherwise, a point is deducted from Player score for each incorrect answer, and some time is taken off the clock.
 
-The game is over when, either there is no time remaining on the clock, or, all ten questions have been answered. 
+The game is over when, either there is no time remaining on the clock, or, all of questions have been answered.
 
-After game play ends, the Player is shown the score and can enter their initials on the webpage next to their score.
+After game play ends, the Player is shown the score and their initials.
 
-Player scores and initials are tracked and will persist to the next game.
+Player scores and their initials are tracked and will persist to the next game.
 
-### Pseudocode: Functional Requirements
+### Functional Requirements
 
-Player is presented with a Start Button
+<!-- Declare variables and initial values. -->
 
-When the player clicks the start button, a countdown timer is started. 
+A variable, timeRemaining, is declared and is set to an initial value, in milliseconds.
 
-Immediately, the player is presented with multiple choice questions one at a time, as timer continues to count down.
+An array of objects, questionsAndChoices is declared. Each object in the array holds questions, and four choices. Each choice has boolean value of true or false.
 
-- As questions are presented and answered, if the answer to a question is correct, the score is incremented by one and the countdown timer continues normally, however
+A variable, playerInitials, is declared and set to an empty string.
 
-- If the answer to a question is incorrect, the score is decremented by one and a certain amount of time is taken off the clock, as a penalty.
+A variable, score, is declared and is set to zero.
 
-Questions continue to be displayed and answered, until the last question is answered, or until the countdown timer reaches zero, whichever happens first. Game play ends at that point in either case.
+<!-- Or, an array of objects, scoreAndInitials is declared. It stores playerScore and playerInitials. -->
 
-When the game is over, the score is displayed and User is presented with a text box for their initials.
+Index.html contains a start button and a place for the score to display, and a place for the playerInitials to display
 
-### Technical Strategy to Meet Functional Requirements
-<!-- // first draft
-//declare initial global variables and reset variable values if needed -->
+Before game play begins, a prompt asks for player's initials and stores that in a variable called playerInitials.
 
-A array, dataArray, is declared to hold all Questions, and correctResponses for each question. Each Question in the dataArray has a nested array that holds the four possible responses for each question.
+When the Start button is clicked, 
+    - an event listener, listening for a button click, fires up a function named countdown, 
 
-An array, scoreInitials is declared to store score and userInitials.
+While timeRemaining is greater than 0 milliseconds && a counter is less than the length of the questionsAndChoices array:
 
-A variable named timeRemaining is set to zero
+    - A For Loop iterates through the array of questionsAndChoices.
 
-A function named askQuestion accepts six pieces of data as arguments (parameters);
-- question, correctAnswer, choiceA, choiceB, choiceC, choiceD
+    - If the answer to a question is correct, call the correctChoice function.
 
-A function call passes the same six pieces of data, in order.
+    - Else call the incorrectChoice function.
 
-<!-- ...to be continued -->
+<!-- End of While Condition -->
 
-<!-- Display index.html -->
-Index.html contains a button and a place for the score to display.
+    - Store playerScore and playerInitials in local storage
+    - Write playerScore to document.
+    - Write playerInitials to document.
+    - Display document.
 
-When button is clicked
-An event listener, listening for a button click, fires up a function, startCountdown
+Functions:
 
-Start Countdown sets starting time to an initial value.
+A function, countdown, 
+    - hides the start button
+    - displays playerScore
+    - displays userInitials
+    sets timeRemaining to 180000 milliseconds, which is three minutes, and 
+    - decrements 1000 milliseconds every second
+    - updates the display in the document every second
+
+A function, correctChoice, 
+    - increments playerScore and 
+    - updates the document display
+
+A function, incorrectChoice, 
+    - decrements playerScore, 
+    - updates playerScore in document display, and 
+    - reduces timeRemaining by 10000 milliseconds, which is 10 seconds.
+    - writes timeRemaining, in seconds, to the document
+
+### Author
+
+Tom van Deusen

@@ -2,15 +2,16 @@
 
 //var header = getElementById('header');
 
+//
 function clickStartButton() {
     alert("The button was clicked!");
     console.log("Someone clicked a button!");
+    startTimer();
 }
 
-//function startTimer() {
-//    var timer=10000;
-
-//}
+// function startTimer() {
+//     var timer=10000;
+// }
 
 
 
