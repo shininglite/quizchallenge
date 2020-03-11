@@ -2,7 +2,32 @@
 Quiz Challenge uses persistent local storage -->
 <!-- Updated game play explanation and updated functional requirements-->
 
-## Quiz Challenge
+# Quiz Challenge
+
+## Purpose of This Project
+
+The purpose of Quiz Challenge is to demonstrate:
+
+how to use a timer to control events in a JavaScript application.
+
+how to store information in arrays of objects, and how to control the display of that information.
+
+how to dynamically manipulate the Document Object Model using JavaScript or jQuery.
+
+how to use Local Storage to store data in the browser, persistently, meaning data will be available to the application even after the browser window is closed.
+
+## How to Use this Project
+
+Anyone with a computer and internet access can either play the quiz, or view the project. 
+
+Play this quiz is at:
+ https://shininglite.github.io/quizchallenge 
+ 
+View the source code for this quiz at https://github.com/shininglite/quizchallenge/
+
+## Future Improvements to Pseudocode
+
+Writing a successful For Loop in this application could be tricky. A future improvement to the pseudocode would try an event-driven approach. For example, If there is time remaining in the game, display the next question and its set of choices.
 
 ### What is Quiz Challenge?
 
@@ -14,11 +39,11 @@ When the player clicks the button, the first of several questions, and its four 
 
 For each of the multiple choice questions displayed:
 
-- The player chooses one of the four answers, only one of which is correct. 
+The player chooses one of the four answers, only one of which is correct. 
 
-- If answer is correct, a point is added to the Player score.
+If answer is correct, a point is added to the Player score.
 
-- Otherwise, a point is deducted from Player score for each incorrect answer, and some time is taken off the clock.
+Otherwise, a point is deducted from Player score for each incorrect answer, and some time is taken off the clock.
 
 The game is over when, either there is no time remaining on the clock, or, all of questions have been answered.
 
@@ -44,43 +69,43 @@ Index.html contains a start button and a place for the score to display, and a p
 
 Before game play begins, a prompt asks for player's initials and stores that in a variable called playerInitials.
 
-When the Start button is clicked, 
-    - an event listener, listening for a button click, fires up a function named countdown, 
+When the Start button is clicked, an event listener, listening for a button click, fires up a function named countdown, 
 
 While timeRemaining is greater than 0 milliseconds && a counter is less than the length of the questionsAndChoices array:
 
-    - A For Loop iterates through the array of questionsAndChoices.
+    A For Loop iterates through the array of questionsAndChoices.
 
-    - If the answer to a question is correct, call the correctChoice function.
+    If the answer to a question is correct, call the correctChoice function.
 
-    - Else call the incorrectChoice function.
+    Else call the incorrectChoice function.
 
-<!-- End of While Condition -->
+<!-- End of While Loop -->
 
-    - Store playerScore and playerInitials in local storage
-    - Write playerScore to document.
-    - Write playerInitials to document.
-    - Display document.
+    Store playerScore and playerInitials in local storage.
+    Write playerScore to document.
+    Write playerInitials to document.
+    Hid start button.
+    Display document showing score and initials.
 
 Functions:
 
 A function, countdown, 
-    - hides the start button
-    - displays playerScore
-    - displays userInitials
-    sets timeRemaining to 180000 milliseconds, which is three minutes, and 
-    - decrements 1000 milliseconds every second
-    - updates the display in the document every second
+    hides the start button.
+    displays playerScore.
+    displays userInitials.
+    sets timeRemaining to 180000 milliseconds, which is three minutes. 
+    decrements 1000 milliseconds every second.
+    updates the display in the document every second.
 
 A function, correctChoice, 
-    - increments playerScore and 
-    - updates the document display
+    increments playerScore
+    updates the document display of that score.
 
 A function, incorrectChoice, 
-    - decrements playerScore, 
-    - updates playerScore in document display, and 
-    - reduces timeRemaining by 10000 milliseconds, which is 10 seconds.
-    - writes timeRemaining, in seconds, to the document
+    decrements playerScore, 
+    updates playerScore in document display, and 
+    reduces timeRemaining by 10000 milliseconds, which is 10 seconds.
+    writes timeRemaining, in seconds, to the document.
 
 ### Author
 
