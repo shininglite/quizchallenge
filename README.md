@@ -14,7 +14,7 @@ how to store information in arrays of objects, and how to control the display of
 
 how to dynamically manipulate the Document Object Model using JavaScript or jQuery.
 
-how to use Local Storage to store data in the browser, persistently, meaning data will be available to the application even after the browser window is closed.
+how to use Local Storage to store data in the browser, persistently, meaning that the data will be available to the application even after the browser window is closed.
 
 ### How to Use this Project
 
@@ -25,10 +25,9 @@ Play this quiz is at:
  
 View the source code for this quiz at https://github.com/shininglite/quizchallenge/
 
-### Animation Demonstration
-The following animation demonstrates the application functionality:
-
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
+### Quiz Challenge Images
+<img src = "assets/img/QuizChallenge.png" width = "300">
+<img src = "assets/img/HighScore.png" width = "300">
 
 ### What is Quiz Challenge?
 
