@@ -12,7 +12,7 @@ const q4 = new Question("String values must be enclosed within ____ when being a
 const q5 = new Question("A very useful tool used during development and debugging for printing content to the debugger is ____", ["JavaScript", "terminal / bash", "for loops", "console.log"], "console.log");
 
 
-let questions = [q1, q2, q3];
+let questions = [q1, q2, q3, q4, q5];
 
 questions = [
   {
