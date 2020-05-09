@@ -10,7 +10,7 @@ const q2 = new Question("The condition in an if / else statement is enclosed wit
 const q3 = new Question("Arrays in JavaScript can be used to store ____.", ["numbers and strings", "other arrays", "booleans", "all of the above"])
 
 
-const questions = [q1, q2, q3];
+let questions = [q1, q2, q3];
 
 questions = [
   {
