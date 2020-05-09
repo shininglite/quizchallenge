@@ -25,9 +25,11 @@ Play this quiz is at:
  
 View the source code for this quiz at https://github.com/shininglite/quizchallenge/
 
-### Future Improvements to Pseudocode
+### Animation Demonstration
+The following animation demonstrates the application functionality:
 
-Writing a successful For Loop in this application could be tricky. A future improvement to the pseudocode would try an event-driven approach. For example, If there is time remaining in the game, display the next question and its set of choices.
+![code quiz](./Assets/04-web-apis-homework-demo.gif)
+
 
 ### What is Quiz Challenge?
 
