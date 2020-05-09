@@ -2,9 +2,9 @@
 Quiz Challenge uses persistent local storage -->
 <!-- Updated game play explanation and updated functional requirements-->
 
-# Quiz Challenge
+## Quiz Challenge
 
-## Purpose of This Project
+### Purpose of This Project
 
 The purpose of Quiz Challenge is to demonstrate:
 
@@ -16,7 +16,7 @@ how to dynamically manipulate the Document Object Model using JavaScript or jQue
 
 how to use Local Storage to store data in the browser, persistently, meaning data will be available to the application even after the browser window is closed.
 
-## How to Use this Project
+### How to Use this Project
 
 Anyone with a computer and internet access can either play the quiz, or view the project. 
 
@@ -25,7 +25,7 @@ Play this quiz is at:
  
 View the source code for this quiz at https://github.com/shininglite/quizchallenge/
 
-## Future Improvements to Pseudocode
+### Future Improvements to Pseudocode
 
 Writing a successful For Loop in this application could be tricky. A future improvement to the pseudocode would try an event-driven approach. For example, If there is time remaining in the game, display the next question and its set of choices.
 
