@@ -30,7 +30,6 @@ The following animation demonstrates the application functionality:
 
 ![code quiz](./Assets/04-web-apis-homework-demo.gif)
 
-
 ### What is Quiz Challenge?
 
 Quiz Challenge is a single-player, timed, question and answer game.
